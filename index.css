@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  display: none;
+  font-size: 38px; }
+  body section article h3 {
+    display: inline-block;
+    margin: 0; }
+  body section article:first-child {
+    position: relative;
+    border: none; }
+    body section article:first-child h3 {
+      padding: 4vw;
+      box-sizing: border-box;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      background-color: white;
+      border-bottom: 10px solid #0E66A5;
+      right: 0;
+      color: #0E66A5;
+      width: 60vw; }
+    body section article:first-child img {
+      position: relative;
+      max-width: 100%; }
+  body section article:not(:first-child) {
+    padding: 2vw 5vw;
+    box-sizing: border-box;
+    border-bottom: dotted 0.5vw #d8d8d8; }
+    body section article:not(:first-child) h3 {
+      padding: 2vw;
+      box-sizing: border-box;
+      vertical-align: top;
+      width: 60%;
+      margin: 0; }
+    body section article:not(:first-child) img {
+      margin: auto;
+      margin-left: 5%;
+      display: inline-block;
+      max-width: 35%; }
+  body #story-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    height: 100%;
+    z-index: 3; }
+    body #story-cover article {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      transform: translate(-50%, -50%);
+      max-height: 80%;
+      overflow: auto;
+      background: white;
+      z-index: 2;
+      box-shadow: 0 0 10000vw 20vw #676767; }
+      body #story-cover article h3 {
+        padding: 18vw 5vw 2vw;
+        background-color: #0E66A5;
+        color: white;
+        margin: 0; }
+      body #story-cover article p {
+        padding: 2% 5%;
+        margin: 0; }
+      body #story-cover article span {
+        cursor: pointer;
+        display: inline-block;
+        position: absolute;
+        top: 2%;
+        right: 4%;
+        color: white;
+        background-color: #0E66A5;
+        font-size: 8vw; }
+
+.display-modal {
+  display: block !important; }
