@@ -25,7 +25,6 @@ var closeModal = function() {
 
 
 var expandStory = function(id) {
-  document.getElementById('story-heading').scrollTop = 0;
   var header = document.getElementById("story-heading");
   header.innerText = stories[id].header;
   document.getElementById("story").appendChild(header);
@@ -40,6 +39,7 @@ var expandStory = function(id) {
   document.getElementById("story").appendChild(storyContent);
   document.getElementById("story-cover").setAttribute("class",
     "stroy display-modal");
+  document.getElementById("story").scrollTop = 0;
 
   document.onkeydown = function(evt) {
     if (evt.keyCode === 27) {
