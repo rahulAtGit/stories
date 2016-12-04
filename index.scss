@@ -1,11 +1,104 @@
 @mixin bp-large {
-     @media only screen and (min-width: 993px){
-        @content;
+    /* ----------- Non-Retina Screens ----------- */
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+         @content;
+    }
+    /* ----------- Retina Screens ----------- */
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+         @content;
     }
 }
 @mixin bp-medium {
-     @media only screen and (min-width: 990px) and (max-width: 992px){
-        @content;
+    /* ----------- iPad mini ----------- */
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+         @content;
+    }
+    /* Portrait */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+         @content;
+    }
+    /* Landscape */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+         @content;
+    }
+    /* ----------- iPad 1 and 2 ----------- */
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+         @content;
+    }
+    /* Portrait */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+         @content;
+    }
+    /* Landscape */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+         @content;
+    }
+    /* ----------- iPad 3 and 4 ----------- */
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+         @content;
+    }
+    /* Portrait */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+         @content;
+    }
+    /* Landscape */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+         @content;
+    }
+    /* ----------- Galaxy Tab 10.1 ----------- */
+    /* Portrait and Landscape */
+    @media (min-device-width: 800px) and (max-device-width: 1280px) {
+         @content;
+    }
+    /* Portrait */
+    @media (max-device-width: 800px) and (orientation: portrait) {
+         @content;
+    }
+    /* Landscape */
+    @media (max-device-width: 1280px) and (orientation: landscape) {
+         @content;
+    }
+    /* ----------- Asus Nexus 7 ----------- */
+    /* Portrait and Landscape */
+    @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) {
+         @content;
+    }
+    /* Portrait */
+    @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: portrait) {
+         @content;
+    }
+    /* Landscape */
+    @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: landscape) {
+         @content;
+    }
+    /* ----------- Kindle Fire HD 7" ----------- */
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) {
+         @content;
+    }
+    /* Portrait */
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+         @content;
+    }
+    /* Landscape */
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+         @content;
+    }
+    /* ----------- Kindle Fire HD 8.9" ----------- */
+    /* Portrait and Landscape */
+    @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5) {
+         @content;
+    }
+    /* Portrait */
+    @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: portrait) {
+         @content;
+    }
+    /* Landscape */
+    @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+         @content;
     }
 }
 $font_size: 30px;
@@ -27,26 +120,25 @@ body {
     $background-size-medium: 18em;
 
     #background {
-      // display: none;
-      @include bp-medium {
-        display: block;
-          height: $background-size-medium;
-          background-color: #EEEDEF;
-      }
+        @include bp-medium {
+            display: block;
+            height: $background-size-medium;
+            background-color: #EEEDEF;
+        }
         @include bp-large {
-          display: block;
+            display: block;
             height: $background-size;
             background-color: #EEEDEF;
         }
     }
 
     section {
-    @include bp-medium {
-        width: 90%;
-        position: relative;
-        top: $background-size-medium / 2;
-        margin: auto;
-    }
+        @include bp-medium {
+            width: 90%;
+            position: relative;
+            top: $background-size-medium / 2;
+            margin: auto;
+        }
         @include bp-large {
             width: 90%;
             position: relative;
@@ -75,6 +167,7 @@ body {
                 width: 50%;
                 float: left;
             }
+
             h3 {
                 padding: 1em;
                 box-sizing: border-box;
@@ -200,16 +293,18 @@ body {
                 font-size: 1.5em;
                 // line-height: 1.5em;
                 vertical-align: center;
-                text-align:left;
+                text-align: left;
                 background-color: #0E66A5;
                 color: white;
                 margin: 0;
             }
-            #story-content::after{
-              content: "";
-              display: table;
-              clear: both;
+
+            #story-content::after {
+                content: "";
+                display: table;
+                clear: both;
             }
+
             p {
                 padding: 2% 5%;
                 margin: 0;
@@ -218,12 +313,12 @@ body {
             }
 
             #story-show {
-              height: 1em;
-              margin-bottom: 2em;
-              font-weight: bolder;
-              position: relative;
-              right: 2%;
-              float: right;
+                height: 1em;
+                margin-bottom: 2em;
+                font-weight: bolder;
+                position: relative;
+                right: 2%;
+                float: right;
             }
         }
     }
