@@ -4,7 +4,7 @@
     }
 }
 @mixin bp-medium {
-     @media only screen and (min-width: 768px) and (max-width: 992px){
+     @media only screen and (min-width: 990px) and (max-width: 992px){
         @content;
     }
 }
@@ -192,10 +192,11 @@ body {
                 color: white;
                 background-color: #0E66A5;
                 font-size: 2em;
+                width: 1em;
             }
 
             h3 {
-                padding: 1.5em 3.5em;
+                padding: 1.5em 2.5em;
                 font-size: 1.5em;
                 line-height: 1.5em;
                 vertical-align: center;

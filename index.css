@@ -3,13 +3,13 @@ body {
   display: none;
   font-size: 30px;
   word-wrap: break-word; }
-  @media only screen and (min-width: 768px) and (max-width: 992px) {
+  @media only screen and (min-width: 990px) and (max-width: 992px) {
     body {
       font-size: 18px; } }
   @media only screen and (min-width: 993px) {
     body {
       font-size: 16px; } }
-  @media only screen and (min-width: 768px) and (max-width: 992px) {
+  @media only screen and (min-width: 990px) and (max-width: 992px) {
     body #background {
       display: block;
       height: 18em;
@@ -19,7 +19,7 @@ body {
       display: block;
       height: 12em;
       background-color: #EEEDEF; } }
-  @media only screen and (min-width: 768px) and (max-width: 992px) {
+  @media only screen and (min-width: 990px) and (max-width: 992px) {
     body section {
       width: 90%;
       position: relative;
@@ -43,7 +43,7 @@ body {
       body section article:first-child {
         display: inline-block;
         width: 34%; } }
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
+    @media only screen and (min-width: 990px) and (max-width: 992px) {
       body section article:first-child {
         display: inline-block;
         width: 50%;
@@ -64,7 +64,7 @@ body {
           top: 3em;
           right: 0;
           transform: translateX(50%); } }
-      @media only screen and (min-width: 768px) and (max-width: 992px) {
+      @media only screen and (min-width: 990px) and (max-width: 992px) {
         body section article:first-child h3 {
           bottom: 0;
           left: 0;
@@ -77,7 +77,7 @@ body {
       @media only screen and (min-width: 993px) {
         body section article:first-child img {
           height: 26em; } }
-      @media only screen and (min-width: 768px) and (max-width: 992px) {
+      @media only screen and (min-width: 990px) and (max-width: 992px) {
         body section article:first-child img {
           height: 18em; } }
   body section article:not(:first-child) {
@@ -92,7 +92,7 @@ body {
         display: inline-block;
         width: 22%;
         padding-bottom: 0; } }
-    @media only screen and (min-width: 768px) and (max-width: 992px) {
+    @media only screen and (min-width: 990px) and (max-width: 992px) {
       body section article:not(:first-child) {
         padding: 1em;
         width: 50%;
@@ -147,9 +147,10 @@ body {
         right: 1em;
         color: white;
         background-color: #0E66A5;
-        font-size: 2em; }
+        font-size: 2em;
+        width: 1em; }
       body #story-cover article h3 {
-        padding: 1.5em 3.5em;
+        padding: 1.5em 2.5em;
         font-size: 1.5em;
         line-height: 1.5em;
         vertical-align: center;
