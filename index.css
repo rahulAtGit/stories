@@ -139,7 +139,7 @@ body {
       background: white;
       z-index: 2;
       box-shadow: 0 0 10000em 20em #676767; }
-      body #story-cover article span {
+      body #story-cover article #close-story {
         cursor: pointer;
         display: inline-block;
         position: absolute;
@@ -152,15 +152,27 @@ body {
       body #story-cover article h3 {
         padding: 1.5em 2.5em;
         font-size: 1.5em;
-        line-height: 1.5em;
         vertical-align: center;
-        text-align: center;
+        text-align: left;
         background-color: #0E66A5;
         color: white;
         margin: 0; }
+      body #story-cover article #story-content::after {
+        content: "";
+        display: table;
+        clear: both; }
       body #story-cover article p {
         padding: 2% 5%;
-        margin: 0; }
+        margin: 0;
+        font-size: 1em;
+        line-height: 1em; }
+      body #story-cover article #story-show {
+        height: 1em;
+        margin-bottom: 2em;
+        font-weight: bolder;
+        position: relative;
+        right: 2%;
+        float: right; }
 
 .display-modal {
   display: block !important; }
